@@ -9,6 +9,7 @@ Pada proyek kali ini, saya akan melakukan metode Unsupervised Learning dengan al
 Game Pokemon adalah salah satu game populer di dunia saat ini, salah satu game populer adalah 'Pokemon Go'. Ini merupakan game berbasis augmented-reality yang dikembangkan oleh Pokemon Company bekerja sama dengan Nintendo dan Niantic *.
 
 **Rubrik/Kriteria Tambahan**:
+
 Masalah yang ingin saya teliti adalah terkait 'Hero' pada Pokemon, saya ingin melihat cluster/pengelompokan 'Attack' dan 'Defence' pada 'Hero' dataset Pokemon.
 
 *Artikel ini telah tayang di Kompas.com dengan judul "Apa Itu Pokemon Go?", Klik untuk baca: https://tekno.kompas.com/read/2016/07/09/13200047/apa.itu.pokemon.go.?page=all. Penulis : Deliusno
@@ -16,25 +17,11 @@ Masalah yang ingin saya teliti adalah terkait 'Hero' pada Pokemon, saya ingin me
 
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
 ### Problem Statements
-
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+- Melihat karakteristik 'Attack' dan 'Defence' yang dimiliki oleh 'Hero' Pokemon.
 
 ### Goals
-
-Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
+- Melakukan cluster/pengelompokan data 'Attack' dan 'Defence', pada 'Hero' Pokemon.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
