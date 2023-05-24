@@ -34,7 +34,7 @@ Masalah yang ingin saya teliti adalah terkait 'Hero' pada Pokemon, saya ingin me
 Pada proyek kali ini, saya mengambil data Pokemon milik akun (https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6#file-pokemon-csv).
 
 ### Variabel-variabel pada Pokemon dataset adalah sebagai berikut:
-- Name: nama hero Pokeomon
+- Name: Nama hero Pokeomon
 - Attack: Serangan pokemon yang akan merusak hero lain (dalam angka).
 - Defence: Seberapa besar kerusakan yang ditahan hero pokemon (dalam angka).
 
@@ -57,23 +57,16 @@ Teknik preparation:
 - Menggunakan metrik Silhouette Score, skor silhouette dalam algoritma pengelompokan K-Means adalah antara -1 dan 1. Skor ini menunjukkan seberapa baik titik data telah dikelompokkan, dan skor di atas 0 dianggap baik, sedangkan poin negatif berarti algoritme K-means Anda telah menempatkannya di titik data cluster yang salah).
 
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
-
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
-
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
-
 Kasus pada proyek kali ini menggunakan clustering/pengelompokan, sehingga menggunakan metrik Silhouette Score. Skor silhouette dalam algoritma pengelompokan K-Means adalah antara -1 dan 1. Skor ini menunjukkan seberapa baik titik data telah dikelompokkan, dan skor di atas 0 dianggap baik, sedangkan poin negatif berarti algoritme K-means Anda telah menempatkannya di titik data cluster yang salah.
 
 Berdasarkan metrik silhouette score, nilai paling besar mendekati 1 adalah 0.5967848800416774, yaitu cluster yang berjumlah 4 yang menggunakan algoritma K-Means.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
 
 **---Ini adalah bagian akhir laporan---**
 
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+Dari hasil klustering diatas, kita dapat mengambil kesimpulan sebagai berikut:
+
+- Berdasarkan Elbow Method kita dapat mengambil jumlah cluster optimal sebesar 2 cluster karna lebih mencerminkan segmentasi kelompok data defence dan attack secara keseluruhan jika kita mengeneralisasi data.
+- Berdasarkan metrik silhouette score, yang mendekati nilai 1 adalah cluster yang berjumlah 4 yang menggunakan algoritma K-Means.
+
+Kesimpulan: Kedua metode diatas bisa digunakan salah satu atau keduanya tergantung permasalahan apa yang ingin dipecahkan. Disini saya ingin menjabarkan hasil yang didapatkan clustering (pengelompokan) algoritma K-Means yang memiliki jumlah cluster 4. Sekilas dapat kita lihat visualisasi, jika semakin kecil attack maka semakin kecil pula defence dan semakin besar attack maka semakin besar pula defence. Hanya sebagian kecil cluster 3 (color = yellow) defence tinggi namun attack berada di tengah, begitu pula cluster 2 (color = blue) attack tinggi namun defence berada di tengah. Secara keseluruhan, dapat disimpulkan 'Attack' dan 'Defence' pada 'Hero' dataset pokemon berbanding lurus jika dilihat dari pengelompokan yang ada.
