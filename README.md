@@ -8,6 +8,10 @@ Pada proyek kali ini, saya akan melakukan metode Unsupervised Learning dengan al
 
 Game Pokemon adalah salah satu game populer di dunia saat ini, salah satu game populer adalah 'Pokemon Go'. Ini merupakan game berbasis augmented-reality yang dikembangkan oleh Pokemon Company bekerja sama dengan Nintendo dan Niantic *.
 
+Metode Unsupervised Learning adalah salah satu jenis pendekatan dalam pembelajaran mesin di mana algoritma belajar dari data yang tidak memiliki label atau informasi yang telah ditentukan sebelumnya. Dalam metode ini, algoritma ditugaskan untuk menemukan pola atau struktur tersembunyi dalam data secara mandiri.
+
+Salah satu algoritma yang umum digunakan dalam metode Unsupervised Learning adalah algoritma Clustering. Clustering adalah proses pengelompokan objek atau data ke dalam kelompok-kelompok atau "klaster" yang memiliki kesamaan dalam beberapa aspek tertentu. Tujuan utama dari algoritma Clustering adalah mengelompokkan data berdasarkan kesamaan dan membuat kelompok yang homogen di dalam kelompok tersebut, sementara menghasilkan perbedaan yang signifikan antara kelompok-kelompok tersebut.
+
 **Rubrik/Kriteria Tambahan**:
 
 Masalah yang ingin saya teliti adalah terkait 'Hero' pada Pokemon, saya ingin melihat cluster/pengelompokan 'Attack' dan 'Defence' pada 'Hero' dataset Pokemon.
@@ -18,10 +22,12 @@ Masalah yang ingin saya teliti adalah terkait 'Hero' pada Pokemon, saya ingin me
 ## Business Understanding
 
 ### Problem Statements
-- Melihat karakteristik 'Attack' dan 'Defence' yang dimiliki oleh 'Hero' Pokemon.
+- Bagaimana mengidentifikasi setidaknya dua kelompok utama berdasarkan 'Attack' dan 'Defence' dengan tingkat keakuratan tertentu?
+- Apakah terdapat kelompok Pokemon dengan 'Attack' dan 'Defence' yang sangat tinggi yang dapat dianggap sebagai 'Hero' Pokemon?
 
 ### Goals
-- Dapat melakukan cluster/pengelompokan data 'Attack' dan 'Defence', pada 'Hero' Pokemon.
+- Dapat mengidentifikasi setidaknya dua kelompok utama berdasarkan 'Attack' dan 'Defence' dengan tingkat keakuratan tertentu.
+- Dapat mengetahui kelompok Pokemon dengan 'Attack' dan 'Defence' yang sangat tinggi yang dapat dianggap sebagai 'Hero' Pokemon.
 
 **Rubrik/Kriteria Tambahan**:
 - “Solution Statement” untuk meraih goals: 
@@ -35,8 +41,27 @@ Pada proyek kali ini, saya mengambil data Pokemon milik akun (https://gist.githu
 
 ### Variabel-variabel pada Pokemon dataset adalah sebagai berikut:
 - Name: Nama hero Pokeomon
-- Attack: Serangan pokemon yang akan merusak hero lain (dalam angka).
-- Defence: Seberapa besar kerusakan yang ditahan hero pokemon (dalam angka).
+- Type 1: Jenis 1 atau kategori Pokemon (dalam obyek)
+- Type 2: Jenis 2 atau kategori Pokemon (dalam obyek)
+- Total: Jumlah total nilai Pokemon (dalam angka)
+- HP: Nilai HP pada Pokémon menggambarkan jumlah kesehatan atau daya tahan Pokémon tersebut dalam pertempuran (dalam angka)
+- Attack: kekuatan serangan fisik atau serangan langsung yang dimiliki oleh sebuah Pokémon dalam pertarungan melawan lawan (dalam angka)
+- Defence: Kemampuan Pokémon dalam menghadapi dan mengurangi kerusakan yang diterimanya dari serangan fisik atau serangan langsung lawan (dalam angka)
+- 
+
+1   Name        800 non-null    object
+ 2   Type 1      800 non-null    object
+ 3   Type 2      414 non-null    object
+ 4   Total       800 non-null    int64 
+ 5   HP          800 non-null    int64 
+ 6   Attack      800 non-null    int64 
+ 7   Defense     800 non-null    int64 
+ 8   Sp. Atk     800 non-null    int64 
+ 9   Sp. Def     800 non-null    int64 
+ 10  Speed       800 non-null    int64 
+ 11  Generation  800 non-null    int64 
+ 12  Legendary   800 non-null    bool  
+dtypes: bool(1), int64(9), object(3)
 
 ## Data Preparation
 Teknik preparation:
