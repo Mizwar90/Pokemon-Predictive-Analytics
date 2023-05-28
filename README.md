@@ -55,16 +55,29 @@ Pada proyek kali ini, saya mengambil data Pokemon milik akun (https://gist.githu
 
 ## Data Preparation
 Teknik preparation:
-- Data Loading
-- Exploratory Data Analysis - Deskripsi Variabel
-- Membuat salinan dataframe dengan dua kolom yaitu attack dan defense
-- Melakukan transformasi pada data
-- Cek nilai pencilan/outlier
-- Menangani Missing Value
-- Membuat fungsi untuk menangani outlier dengan teknik IQR method
-- Menangani Missing Value dengan fungsi dropna
-- Cek nilai pencilan/outlier kembali
-- Data Scaling/normalisasi Data
+- **Data Loading**
+- **Exploratory Data Analysis - Deskripsi Variabel**
+- **Membuat salinan dataframe dengan dua kolom yaitu attack dan defense**
+- **Melakukan transformasi pada data**: Pada tahap ini, kita memeriksa apakah ada missing value pada data. Hasil pemeriksaan tidak ditemukan missing value.
+- **Cek nilai pencilan/*outlier***: Pencilan/*Outlier* adalah data atau pengamatan yang tampak menyimpang secara nyata dari pengamatan lain dalam sampel. Biasanya pencilan terletak jauh atau sangat berbeda dari nilai-nilai lain dalam sampel acak dari suatu populasi. Dari gambar dibawah terlihat terdapat pencilan.
+![download (1)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/acd570a3-ffe3-4ad7-a0f8-2c2340a5b34f)
+
+- Menangani *Missing Value*
+- Membuat fungsi untuk menangani *outlier* dengan teknik *IQR method*
+- Menangani *Missing Value* dengan fungsi dropna
+- Cek nilai pencilan/*outlier* kembali: Setelah menangani pencilan dengan teknik *IQR method* sudah tidak terdapat nilai pencilan, seperti gambar dibawah.
+- ![download (2)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/1ec70781-a691-4832-a24b-fa03ca4724fe)
+
+- ***Data Scaling*/normalisasi Data**: Pada tahap ini menggunakan fungsi StandarScaler dalam normalisasi data.
+
+- ***Clustering* menggunakan K-Means**
+- ![download (4)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/2566f2dd-3fb9-43f1-b97b-3e02256fdc90)
+
+
+- **Metode Elbow** jumlah cluster optimal yang dipilih adalah 3, karena setelah titik tersebut, penurunan inertia tidak signifikan lagi. Seperti pada gambar dibawah.
+- ![download (3)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/6bc2f43e-2405-44f6-8729-fb930ded1d06)
+
+
 
 ## Modeling
 - Clustering menggunakan K-Means, dengan memilih jumlah cluster secara manual mulai dari 2, 3 dan 4.
