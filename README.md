@@ -92,16 +92,38 @@ Teknik preparation:
 - Menggunakan metrik Silhouette Score, skor silhouette dalam algoritma pengelompokan K-Means adalah antara -1 dan 1. Skor ini menunjukkan seberapa baik titik data telah dikelompokkan, dan skor di atas 0 dianggap baik, sedangkan poin negatif berarti algoritme K-means Anda telah menempatkannya di titik data cluster yang salah).
 
 ## Evaluation
-Kasus pada proyek kali ini menggunakan clustering/pengelompokan, sehingga menggunakan metrik Silhouette Score. Skor silhouette dalam algoritma pengelompokan K-Means adalah antara -1 dan 1. Skor ini menunjukkan seberapa baik titik data telah dikelompokkan, dan skor di atas 0 dianggap baik, sedangkan poin negatif berarti algoritme K-means Anda telah menempatkannya di titik data cluster yang salah.
+Dalam konteks clustering Pokemon, nilai Silhouette Score yang tinggi menunjukkan kualitas clustering yang lebih baik. Silhouette Score mengukur sejauh mana setiap sampel dalam kluster mendekati sampel-sampel dalam kluster lainnya, dibandingkan dengan kluster yang seharusnya. Disini saya juga menggunakan Metrik inertia sebagai pembanding, metrik inertia menggambarkan penyebaran data dalam kluster, di mana nilai inertia yang lebih rendah menunjukkan kluster yang lebih padat dan lebih baik.
 
-Berdasarkan metrik silhouette score, nilai paling besar mendekati 1 adalah 0.5967848800416774, yaitu cluster yang berjumlah 4 yang menggunakan algoritma K-Means.
+Interpretasi Silhouette Score adalah sebagai berikut:
+
+Jika Silhouette Score mendekati 1: Ini menunjukkan bahwa sampel-sampel dalam kluster saling berdekatan dengan baik dan secara jelas berbeda dengan sampel-sampel dalam kluster lainnya. Ini mengindikasikan pembagian kluster yang baik dan terpisah secara jelas dalam data Pokemon.
+
+Jika Silhouette Score mendekati 0: Ini menunjukkan bahwa sampel-sampel memiliki keterhubungan yang tidak jelas dengan kluster tertentu atau terletak pada batas antara kluster. Ini mengindikasikan adanya ketidakpastian dalam pembagian kluster dan kemungkinan kesulitan dalam mengidentifikasi pemisahan yang jelas antara kelompok Pokemon.
+
+Jika Silhouette Score negatif: Ini menunjukkan bahwa sebagian besar sampel mungkin telah ditempatkan dalam kluster yang salah atau terdapat overlap yang signifikan antara kluster. Ini menunjukkan bahwa pembagian kluster mungkin tidak sesuai dengan data Pokemon yang digunakan.
+
+Berdasarkan metrik silhouette score, nilai paling besar mendekati 1 adalah 0.5967848800416774, yaitu cluster yang berjumlah 4 yang menggunakan algoritma K-Means dan nilai inertia 425.3343817537224 dengan jumlah cluster 4. Meskipun begitu jumlah cluster yang dipilih adalah 3 mempertimbangkan hasil yang didapatkan menggunakan metode Elbow diatas. Dikarenakan terdapat anomali nilai pada metrik silhouette score dan inertia, dimana semakin besar jumlah cluster maka nilai metrik semakin besar, begitu seterusnya .
 
 
 **---Ini adalah bagian akhir laporan---**
 
-Dari hasil klustering diatas, kita dapat mengambil kesimpulan sebagai berikut:
+- Setelah melakukan analisis clustering pada data Pokémon menggunakan atribut 'attack' dan 'defense', berikut adalah ringkasan kesimpulan dan rekomendasi yang dapat diambil dari penelitian ini:
 
-- Berdasarkan Elbow Method kita dapat mengambil jumlah cluster optimal sebesar 2 cluster karna lebih mencerminkan segmentasi kelompok data defence dan attack secara keseluruhan jika kita mengeneralisasi data.
-- Berdasarkan metrik silhouette score, yang mendekati nilai 1 adalah cluster yang berjumlah 4 yang menggunakan algoritma K-Means.
+Analisis Clustering:
+
+Dilakukan clustering menggunakan metode KMeans untuk membagi Pokémon ke dalam kelompok berdasarkan atribut 'attack' dan 'defense'.
+Jumlah cluster yang dihasilkan adalah 4.
+Metrik evaluasi yang digunakan adalah inertia, Silhouette Score, dan Davies-Bouldin Index.
+Hasil Analisis:
+
+Dalam analisis clustering, ditemukan [jumlah cluster yang Anda pilih] kelompok Pokémon berdasarkan atribut 'attack' dan 'defense'.
+Kelompok-kelompok ini mencerminkan variasi dalam kemampuan serang dan pertahanan Pokémon.
+Rekomendasi dan Insight:
+
+Dengan memahami kelompok-kelompok Pokémon yang terbentuk, pemain Pokémon atau analis dapat mengidentifikasi perbedaan dan keunikan dalam atribut 'attack' dan 'defense'.
+Kelompok Pokémon dengan tingkat 'attack' dan 'defense' yang tinggi dapat menjadi pilihan yang kuat untuk pertempuran atau strategi serangan.
+Kelompok Pokémon dengan tingkat 'attack' yang rendah tetapi tingkat 'defense' yang tinggi mungkin lebih cocok untuk bertahan dan memiliki daya tahan yang baik dalam pertempuran.
+Melalui analisis clustering ini, dapat ditemukan wawasan baru tentang struktur dan karakteristik Pokémon berdasarkan atribut 'attack' dan 'defense'.
+Rekomendasi lebih lanjut atau insight yang lebih mendalam dapat diperoleh dengan menganalisis atribut lainnya atau menggabungkan atribut 'attack' dan 'defense' dengan atribut lainnya.
 
 Kesimpulan: Kedua metode diatas bisa digunakan salah satu atau keduanya tergantung permasalahan apa yang ingin dipecahkan. Disini saya ingin menjabarkan hasil yang didapatkan clustering (pengelompokan) algoritma K-Means yang memiliki jumlah cluster 4. Sekilas dapat kita lihat visualisasi, jika semakin kecil attack maka semakin kecil pula defence dan semakin besar attack maka semakin besar pula defence. Hanya sebagian kecil cluster 3 (color = yellow) defence tinggi namun attack berada di tengah, begitu pula cluster 2 (color = blue) attack tinggi namun defence berada di tengah. Secara keseluruhan, dapat disimpulkan 'Attack' dan 'Defence' pada 'Hero' dataset pokemon berbanding lurus jika dilihat dari pengelompokan yang ada.
