@@ -66,22 +66,29 @@ Teknik preparation:
 - Membuat fungsi untuk menangani *outlier* dengan teknik *IQR method*
 - Menangani *Missing Value* dengan fungsi dropna
 - Cek nilai pencilan/*outlier* kembali: Setelah menangani pencilan dengan teknik *IQR method* sudah tidak terdapat nilai pencilan, seperti gambar dibawah.
-- ![download (2)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/1ec70781-a691-4832-a24b-fa03ca4724fe)
+ ![download (2)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/1ec70781-a691-4832-a24b-fa03ca4724fe)
 
 - ***Data Scaling*/normalisasi Data**: Pada tahap ini menggunakan fungsi StandarScaler dalam normalisasi data.
 
 - ***Clustering* menggunakan K-Means**
-- ![download (4)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/2566f2dd-3fb9-43f1-b97b-3e02256fdc90)
+ ![download (4)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/2566f2dd-3fb9-43f1-b97b-3e02256fdc90)
 
 
 - **Metode Elbow** jumlah cluster optimal yang dipilih adalah 3, karena setelah titik tersebut, penurunan inertia tidak signifikan lagi. Seperti pada gambar dibawah.
-- ![download (3)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/6bc2f43e-2405-44f6-8729-fb930ded1d06)
+ ![download (3)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/6bc2f43e-2405-44f6-8729-fb930ded1d06)
 
 
 
 ## Modeling
 - Clustering menggunakan K-Means, dengan memilih jumlah cluster secara manual mulai dari 2, 3 dan 4.
-- Membuat fungsi Metode Elbow untuk menentukan optimalisasi jumlah cluster berdasarkan metode Elbow.
+- Membuat fungsi Metode Elbow untuk menentukan optimalisasi jumlah cluster berdasarkan metode Elbow. Jumlah cluster optimal yang dipilih adalah 3, karena setelah titik tersebut, penurunan inertia tidak signifikan lagi. Seperti pada gambar dibawah.
+ ![download (3)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/6bc2f43e-2405-44f6-8729-fb930ded1d06)
+- ***Clustering* menggunakan K-Means**. Berdasarkan metode Elbow, dipilih jumlah cluster = 3. Visualisasi **cluster** dapat terlihat seperti gambar dibawah. 
+ ![download (4)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/2566f2dd-3fb9-43f1-b97b-3e02256fdc90)
+- ***Clustering* menggunakan Hierarchical Clustering**. Untuk membandingkan cluster dengan metode K-Means didapatkan hasil visualisasi serupa.
+
+![download (5)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/8a40b893-88de-49a9-8133-37524d86d65b)
+
 - Menggunakan metrik Silhouette Score, skor silhouette dalam algoritma pengelompokan K-Means adalah antara -1 dan 1. Skor ini menunjukkan seberapa baik titik data telah dikelompokkan, dan skor di atas 0 dianggap baik, sedangkan poin negatif berarti algoritme K-means Anda telah menempatkannya di titik data cluster yang salah).
 
 ## Evaluation
