@@ -47,21 +47,11 @@ Pada proyek kali ini, saya mengambil data Pokemon milik akun (https://gist.githu
 - HP: Nilai HP pada Pokémon menggambarkan jumlah kesehatan atau daya tahan Pokémon tersebut dalam pertempuran (dalam angka)
 - Attack: kekuatan serangan fisik atau serangan langsung yang dimiliki oleh sebuah Pokémon dalam pertarungan melawan lawan (dalam angka)
 - Defence: Kemampuan Pokémon dalam menghadapi dan mengurangi kerusakan yang diterimanya dari serangan fisik atau serangan langsung lawan (dalam angka)
-- 
-
-1   Name        800 non-null    object
- 2   Type 1      800 non-null    object
- 3   Type 2      414 non-null    object
- 4   Total       800 non-null    int64 
- 5   HP          800 non-null    int64 
- 6   Attack      800 non-null    int64 
- 7   Defense     800 non-null    int64 
- 8   Sp. Atk     800 non-null    int64 
- 9   Sp. Def     800 non-null    int64 
- 10  Speed       800 non-null    int64 
- 11  Generation  800 non-null    int64 
- 12  Legendary   800 non-null    bool  
-dtypes: bool(1), int64(9), object(3)
+- Sp. Atk: Salah satu dari dua jenis serangan utama dalam permainan Pokémon (dalam angka)
+- Sp. Def: Statistik yang mengukur ketahanan Pokémon terhadap serangan khusus dari lawan (dalam angka)
+- Speed: Statistik yang menentukan tingkat kecepatan sebuah Pokémon dalam pertempuran (dalam angka)
+- Generation: Mengacu pada kelompok Pokémon yang diperkenalkan dalam satu periode waktu tertentu dalam sejarah franchise Pokémon (dalam angka)
+- Legendary: Kategori khusus Pokémon yang dianggap langka, kuat, dan memiliki status khusus dalam dunia Pokémon (dalam boolean)
 
 ## Data Preparation
 Teknik preparation:
