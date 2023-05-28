@@ -77,7 +77,7 @@ Teknik preparation:
 - **Data Loading**
 - **Exploratory Data Analysis - Deskripsi Variabel**
 - **Membuat salinan dataframe dengan dua kolom yaitu attack dan defense**
-- **Melakukan transformasi pada data**: Pada tahap ini, kita memeriksa apakah ada missing value pada data. Hasil pemeriksaan tidak ditemukan missing value.
+- **Melakukan transformasi pada data**: Pada tahap ini, kita memeriksa apakah ada *missing value* pada data. Hasil pemeriksaan tidak ditemukan *missing value*.
 - **Cek nilai pencilan/*outlier***: Pencilan/*Outlier* adalah data atau pengamatan yang tampak menyimpang secara nyata dari pengamatan lain dalam sampel. Biasanya pencilan terletak jauh atau sangat berbeda dari nilai-nilai lain dalam sampel acak dari suatu populasi. Dari gambar dibawah terlihat terdapat pencilan.
 ![download (1)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/acd570a3-ffe3-4ad7-a0f8-2c2340a5b34f)
 Gambar 1. Cek nilai pencilan
