@@ -31,8 +31,8 @@ Masalah yang ingin saya teliti adalah terkait 'Hero' pada Pokemon, saya ingin me
 - “Solution Statement” untuk meraih goals: 
 
     ### Solution statements
-    - Clustering menggunakan K-Means dan penentuan jumlah cluster menggunakan metode Elbow.
-    - Metrik menggunakan Silhouette Score
+    - Clustering menggunakan K-Means dan Hierarchical Clustering serta penentuan jumlah cluster menggunakan metode Elbow.
+    - Metrik menggunakan Silhouette Score dan Inertia.
 
 ## Data Understanding
 Pada proyek kali ini, saya mengambil data Pokemon milik akun (https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6#file-pokemon-csv).
@@ -59,21 +59,25 @@ Teknik preparation:
 - **Melakukan transformasi pada data**: Pada tahap ini, kita memeriksa apakah ada missing value pada data. Hasil pemeriksaan tidak ditemukan missing value.
 - **Cek nilai pencilan/*outlier***: Pencilan/*Outlier* adalah data atau pengamatan yang tampak menyimpang secara nyata dari pengamatan lain dalam sampel. Biasanya pencilan terletak jauh atau sangat berbeda dari nilai-nilai lain dalam sampel acak dari suatu populasi. Dari gambar dibawah terlihat terdapat pencilan.
 ![download (1)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/acd570a3-ffe3-4ad7-a0f8-2c2340a5b34f)
+Gambar 1. Cek nilai pencilan
 
 - Menangani *Missing Value*
 - Membuat fungsi untuk menangani *outlier* dengan teknik *IQR method*
 - Menangani *Missing Value* dengan fungsi dropna
 - Cek nilai pencilan/*outlier* kembali: Setelah menangani pencilan dengan teknik *IQR method* sudah tidak terdapat nilai pencilan, seperti gambar dibawah.
  ![download (2)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/1ec70781-a691-4832-a24b-fa03ca4724fe)
+ Gambar 2. Cek nilai pencilan setelah menggunakan metode IQR
 
 - ***Data Scaling*/normalisasi Data**: Pada tahap ini menggunakan fungsi StandarScaler dalam normalisasi data.
 
 - ***Clustering* menggunakan K-Means**
  ![download (4)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/2566f2dd-3fb9-43f1-b97b-3e02256fdc90)
+ Gambar 3. Clustering menggunakan K-Means
 
 
 - **Metode Elbow** jumlah cluster optimal yang dipilih adalah 3, karena setelah titik tersebut, penurunan inertia tidak signifikan lagi. Seperti pada gambar dibawah.
  ![download (3)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/6bc2f43e-2405-44f6-8729-fb930ded1d06)
+ Gambar 4. Metode Elbow
 
 
 
@@ -81,13 +85,16 @@ Teknik preparation:
 - Clustering menggunakan K-Means, dengan memilih jumlah cluster secara manual mulai dari 2, 3 dan 4.
 - Membuat fungsi Metode Elbow untuk menentukan optimalisasi jumlah cluster berdasarkan metode Elbow. Jumlah cluster optimal yang dipilih adalah 3, karena setelah titik tersebut, penurunan inertia tidak signifikan lagi. Seperti pada gambar dibawah.
  ![download (3)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/6bc2f43e-2405-44f6-8729-fb930ded1d06)
+ Gambar 5. Metode Elbow
 - ***Clustering* menggunakan K-Means**. Berdasarkan metode Elbow, dipilih jumlah cluster = 3. Visualisasi **cluster** dapat terlihat seperti gambar dibawah. 
  ![download (4)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/2566f2dd-3fb9-43f1-b97b-3e02256fdc90)
+ Gambar 6. Clustering menggunakan K-Means
+ 
 - ***Clustering* menggunakan Hierarchical Clustering**. Untuk membandingkan cluster dengan metode K-Means didapatkan hasil visualisasi serupa.
 
 ![download (5)](https://github.com/Mizwar90/Pokemon-Predictive-Analytics/assets/108685416/8a40b893-88de-49a9-8133-37524d86d65b)
 
-- Menggunakan metrik Silhouette Score, skor silhouette dalam algoritma pengelompokan K-Means adalah antara -1 dan 1. Skor ini menunjukkan seberapa baik titik data telah dikelompokkan, dan skor di atas 0 dianggap baik, sedangkan poin negatif berarti algoritme K-means Anda telah menempatkannya di titik data cluster yang salah).
+Gambar 7. Clustering menggunakan Hierarchical Clustering
 
 ## Evaluation
 Dalam konteks clustering Pokemon, nilai Silhouette Score yang tinggi menunjukkan kualitas clustering yang lebih baik. Silhouette Score mengukur sejauh mana setiap sampel dalam kluster mendekati sampel-sampel dalam kluster lainnya, dibandingkan dengan kluster yang seharusnya. Disini saya juga menggunakan Metrik inertia sebagai pembanding, metrik inertia menggambarkan penyebaran data dalam kluster, di mana nilai inertia yang lebih rendah menunjukkan kluster yang lebih padat dan lebih baik.
