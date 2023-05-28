@@ -18,6 +18,27 @@ Masalah yang ingin saya teliti adalah terkait 'Hero' pada Pokemon, saya ingin me
 
 
 ## Business Understanding
+Berikut adalah beberapa contoh aplikasi praktis dari hasil analisis clustering pada karakteristik 'Attack' dan 'Defense' Pokémon:
+
+1. Pengembangan Strategi Pertempuran:
+
+Hasil analisis clustering dapat membantu pengembangan strategi pertempuran yang lebih efektif. Dengan mengidentifikasi kelompok Pokémon yang memiliki kemampuan serang dan pertahanan serupa, pemain dapat mengembangkan strategi yang memanfaatkan kekuatan dan kelemahan masing-masing kelompok. Misalnya, pemain dapat fokus pada penggunaan Pokémon dengan serangan tinggi untuk menyerang lawan dengan kuat atau menggunakan Pokémon dengan pertahanan tinggi untuk bertahan lebih baik.
+
+2. Identifikasi Tipe Pokémon yang Serupa:
+
+Melalui clustering, Pokémon dengan karakteristik serupa dalam hal 'Attack' dan 'Defense' dapat dikelompokkan bersama. Ini dapat membantu dalam identifikasi tipe Pokémon yang serupa berdasarkan kemampuan serang dan pertahanan mereka. Misalnya, jika beberapa kelompok Pokémon memiliki kemampuan serang yang tinggi tetapi pertahanan yang rendah, itu bisa menunjukkan adanya kelompok Pokémon dengan jenis tertentu yang memiliki pola serupa dalam atribut ini. Informasi ini dapat digunakan untuk memahami hubungan antara tipe Pokémon dan karakteristik mereka.
+
+3. Pemilihan Tim Pokémon yang Seimbang:
+
+Dengan memanfaatkan hasil clustering, pemain dapat memilih Pokémon yang seimbang dari kelompok-kelompok yang berbeda. Ini membantu dalam pembentukan tim Pokémon yang memiliki keseimbangan antara serangan dan pertahanan. Pemain dapat memilih Pokémon dari kelompok-kelompok yang berbeda untuk memastikan bahwa tim mereka memiliki kemampuan yang cukup untuk menyerang dan bertahan dalam pertempuran.
+
+4. Analisis Kelemahan dan Kekuatan Pokémon:
+
+Dalam analisis clustering, Pokémon dengan karakteristik serupa dalam hal 'Attack' dan 'Defense' dikelompokkan bersama. Dengan mempelajari kelompok-kelompok ini, pemain dapat menganalisis kelemahan dan kekuatan Pokémon dalam pertempuran. Misalnya, jika ada kelompok Pokémon dengan pertahanan tinggi tetapi serangan rendah, pemain dapat menyadari bahwa kelompok ini cenderung lebih cocok untuk bertahan daripada menyerang. Ini memberikan pemahaman tentang bagaimana Pokémon dapat diandalkan dalam pertempuran berdasarkan atribut serang dan bertahan mereka.
+
+5. Pembuatan Tim dengan Beragam Strategi:
+
+Dengan memahami kelompok-kelompok Pokémon yang terbentuk, pemain dapat menciptakan tim dengan beragam strategi. Mereka dapat memilih Pokémon dari kelompok-kelompok yang berbeda untuk menciptakan kombinasi strategi yang beragam, seperti menggunakan Pokémon dengan serangan tinggi untuk menyerang dan Pokémon dengan pertahanan tinggi untuk bertahan. Ini memberikan fleksibilitas dalam membangun tim dengan pendekatan yang berbeda untuk pertempuran.
 
 ### Problem Statements
 - Bagaimana mengidentifikasi setidaknya dua kelompok utama berdasarkan 'Attack' dan 'Defence' dengan tingkat keakuratan tertentu?
